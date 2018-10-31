@@ -1,18 +1,18 @@
-modify.exports = (enterWanted, warrantInfo) => {
-    enterWanted
-        .setValue('@headerInput', warrantInfo.header)
-        .setValue('@mkeInput', warrantInfo.mke)
-        .setValue('@originatingAgencyInput', warrantInfo.originatingAgency)
-        .setValue('@nameInput', warrantInfo.name)
-        .setValue('@sexInput', warrantInfo.sex)
-        .setValue('@raceInput', warrantInfo.race)
-        .setValue('@heightInput', warrantInfo.height)
-        .setValue('@weightInput', warrantInfo.weight)
-        .setValue('@hairInput', warrantInfo.hair)
-        .setValue('@offenseInput', warrantInfo.offense)
-        .setValue('@dateOfWarrantInput', warrantInfo.dateOfWarrant)
+module.exports = (enterWantedPageObjects) => {
+    enterWantedPageObjects
+        .setValue('@headerInput', header)
+        .setValue('@mkeInput', mke)
+        .setValue('@originatingAgencyInput', originatingAgency)
+        .setValue('@nameInput', name)
+        .setValue('@sexInput',sex)
+        .setValue('@raceInput',race)
+        .setValue('@heightInput',height)
+        .setValue('@weightInput', weight)
+        .setValue('@hairInput', hair)
+        .setValue('@offenseInput', offense)
+        .setValue('@dateOfWarrantInput', dateOfWarrant)
         .click('@submitButton')
-        .expect.element('@outputHeader').text.to.equal(warrantInfo.outputHeader).before(100000)
-    enterWanted
-        .expect.element(warrantInfo.resultsSelector).text.to.equal(warrantInfo.results)
+        .expect.element('@outputHeader').text.to.equal(outputHeader).before(100000)
+        enterWantedPageObjects
+        .expect.element(resultsSelector).text.to.equal(results)
 }

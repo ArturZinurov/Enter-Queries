@@ -4,7 +4,7 @@ var enterWanted = {}
 
 module.exports = {
     beforeEach: browser => {
-        enterWanted = browser.page.enterWantedPageObject()
+        enterWanted = browser.page.enterWantedPageObjects()
         enterWanted.navigate()
 
     },
@@ -13,7 +13,7 @@ module.exports = {
     },
     'Valid Entry': () => {
         EWtestData.validTerms.forEach(test => {
-            fillOutFormE(enterWanted, validEntry)
+            fillOutFormE(enterWanted, test.validTerms)
         })
 
     },
