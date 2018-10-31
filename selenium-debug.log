@@ -1,4 +1,4 @@
-17:17:52.055 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.14.0', revision: 'aacccce0'
-17:17:52.056 INFO [GridLauncherV3$1.launch] - Launching a standalone Selenium Server on port 4445
-2018-10-29 17:17:52.142:INFO::main: Logging initialized @375ms to org.seleniumhq.jetty9.util.log.StdErrLog
-17:17:52.531 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4445
+14:19:45.560 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.14.0', revision: 'aacccce0'
+14:19:45.561 INFO [GridLauncherV3$1.launch] - Launching a standalone Selenium Server on port 4445
+2018-10-31 14:19:45.649:INFO::main: Logging initialized @363ms to org.seleniumhq.jetty9.util.log.StdErrLog
+14:19:46.033 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4445
