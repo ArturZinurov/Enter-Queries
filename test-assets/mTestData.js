@@ -1,5 +1,6 @@
 module.exports = {
     validTerms: [{
+        warrantId: '1234567891',
         header: '123456789',
         mke: "MKE",
         originatingAgency: "CHI123456",
@@ -13,9 +14,11 @@ module.exports = {
         dateOfWarrant: "10312017",
         output: "Valid",
         resultsSelector: "@queryTitle",
-        results: "123456789.MKE.CHI123456.Harry Dresden.M.W.611.200.Black.Arson.2017-10-31......"
+        results: "1234567891.123456789.MKE.CHI123456.Harry Dresden.M.W.611.200.Black.Arson.2017-10-31......"
+
     }],
     invalidTerms: [{
+        warrantId: '123',
         header: '123456789L',
         mke: "MKE65",
         originatingAgency: "0123CHI123456",

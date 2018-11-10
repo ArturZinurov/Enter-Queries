@@ -1,6 +1,7 @@
 module.exports = {
-    url: 'http://localhost:3000/#/enter',
+    url: 'http://localhost:3000/#/modify',
     elements: {
+        warrantId : 'input[name="widInput"]',
         header: 'input[name="hdrInput"]',
         mke: 'input[name="mkeInput"]',
         originatingAgency: 'input[name="oriInput"]',
@@ -23,7 +24,7 @@ module.exports = {
             locateStrategy: 'xpath'
         },
         clear: '#clearBtn',
-        output: 'h4[id="validHeader"]',
+        output: '#validHeader',
         queryTitle: 'span[name="queryTitle"]',
         queryBody: 'span[name="queryBody"]',
         error: '#errorList'

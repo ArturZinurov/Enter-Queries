@@ -3,23 +3,23 @@
             failures="0"
             tests="2">
 
-  <testsuite name="Tests.enterWantedTEST"
+  <testsuite name="Tests.cancelWantedTest"
     errors="1" failures="0" hostname="" id="" package="Tests" skipped="1"
-    tests="2" time="0.01400" timestamp="Wed, 31 Oct 2018 22:25:19 GMT">
+    tests="2" time="0.01900" timestamp="Sat, 10 Nov 2018 00:07:40 GMT">
   
-    <testcase name="Valid Entry" classname="Tests.enterWantedTEST" time="0.01400" assertions="0">
+    <testcase name="Valid Entry" classname="Tests.cancelWantedTest" time="0.01900" assertions="0">
     </testcase>
   
 
   
     <system-err>
-        Error while running [Tests / Enter Wanted TEST / Valid Entry]:
+        Error while running [Tests / Cancel Wanted Test / Valid Entry]:
 
-  TypeError: enterWantedPageObjects.elements is not a function
-    at module.exports (C:\Users\Arthur\Desktop\QaDevMountain\Enter Quries\test-assets\enterWantedfunc.js:17:10)
-    at Valid Entry.EWtestData.validTerms.forEach.test (C:\Users\Arthur\Desktop\QaDevMountain\Enter Quries\Tests\enterWantedTEST.js:16:13)
+  ReferenceError: modifyWantedPageObjects is not defined
+    at module.exports (C:\Users\Arthur\Desktop\QaDevMountain\Enter Quries\test-assets\cancelWantedFunc.js:8:5)
+    at Valid Entry.cancelTestData.validTerms.forEach.test (C:\Users\Arthur\Desktop\QaDevMountain\Enter Quries\Tests\cancelWantedTest.js:16:13)
     at Array.forEach (&lt;anonymous&gt;)
-    at Object.Valid Entry (C:\Users\Arthur\Desktop\QaDevMountain\Enter Quries\Tests\enterWantedTEST.js:15:31)
+    at Object.Valid Entry (C:\Users\Arthur\Desktop\QaDevMountain\Enter Quries\Tests\cancelWantedTest.js:15:35)
     at Module.call (C:\Users\Arthur\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\module.js:62:34)
     at C:\Users\Arthur\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\testcase.js:70:29
     at _fulfilled (C:\Users\Arthur\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:834:54)
@@ -32,7 +32,7 @@
   
     
     <testcase
-      name="Invalid Entry" classname="Tests.enterWantedTEST">
+      name="Invalid Entry" classname="Tests.cancelWantedTest">
       <skipped />
     </testcase>
     

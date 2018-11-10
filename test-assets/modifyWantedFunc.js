@@ -1,5 +1,6 @@
-module.exports = (enterWantedPageObjects, warrant) => {
-    enterWantedPageObjects
+module.exports = (modifyWantedPageObjects, warrant) => {
+    modifyWantedPageObjects
+        .setValue('@warrantId', warrant.warrantId)
         .setValue('@header', warrant.header)
         .setValue('@mke', warrant.mke)
         .setValue('@originatingAgency', warrant.originatingAgency)
@@ -13,15 +14,15 @@ module.exports = (enterWantedPageObjects, warrant) => {
         .setValue('@dateOfWarrant', warrant.dateOfWarrant)
         .click('@submit')
         .expect.element('@output').text.to.equal(warrant.output).before(500)
-    enterWantedPageObjects
+    modifyWantedPageObjects
         .api.elements('span[name="queryBody"]', function (results) {
             if (results.len > 0) {
-                enterWantedPageObjects
+                modifyWantedPageObjects
                     .expect.element('@error')
                 console.log(results)
             } else {
 
-                enterWantedPageObjects
+                modifyWantedPageObjects
                     .expect.element('@queryBody').text.to.equal(warrant.results).before(500)
             }
         })

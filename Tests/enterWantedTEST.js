@@ -1,5 +1,5 @@
 var EWtestData = require('../test-assets/EWtestData')
-var fillOutFormE = require('../test-assets/enterWantedfunc')
+var enterWantedFunc = require('../test-assets/enterWantedfunc')
 var enterWanted = {}
 
 module.exports = {
@@ -13,8 +13,13 @@ module.exports = {
     },
     'Valid Entry': () => {
         EWtestData.validTerms.forEach(test => {
-            fillOutFormE(enterWanted, test.validTerms)
+            enterWantedFunc(enterWanted, test)
         })
 
     },
+    'Invalid Entry': () => {
+        EWtestData.invalidTerms.forEach(test => {
+            enterWantedFunc(enterWanted, test)
+        })
+    }
 }
