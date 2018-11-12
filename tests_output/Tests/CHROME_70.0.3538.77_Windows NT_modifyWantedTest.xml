@@ -5,14 +5,14 @@
 
   <testsuite name="Tests.modifyWantedTest"
     errors="0" failures="0" hostname="" id="" package="Tests" skipped="0"
-    tests="2" time="7.489" timestamp="Fri, 09 Nov 2018 23:28:50 GMT">
+    tests="2" time="7.924" timestamp="Mon, 12 Nov 2018 21:39:58 GMT">
   
-    <testcase name="Valid Entry" classname="Tests.modifyWantedTest" time="6.298" assertions="1">
+    <testcase name="Valid Entry" classname="Tests.modifyWantedTest" time="6.637" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Invalid Entry" classname="Tests.modifyWantedTest" time="1.191" assertions="1">
+    <testcase name="Invalid Entry" classname="Tests.modifyWantedTest" time="1.287" assertions="1">
 
     
     </testcase>

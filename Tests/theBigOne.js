@@ -17,5 +17,43 @@ module.exports = {
         cancelWantedPageObjects = browser.page.cancelWantedPageObjects()
         cancelWantedPageObjects.navigate()
 
+    },
+    after: function (browser) {
+        browser.end()
+
+    },
+    'Valid Entry ENTER': () => {
+        EWtestData.validTerms.forEach(test => {
+            enterWantedFunc(enterWanted, test)
+        })
+
+    },
+    'Invalid Entry ENTER': () => {
+        EWtestData.invalidTerms.forEach(test => {
+            enterWantedFunc(enterWanted, test)
+        })
+    },
+    'Valid Entry MODIFY': () => {
+        testDataModify.validTerms.forEach(test => {
+            modifyWantedFunc(modifyWantedPageObject, test)
+
+        })
+
+    },
+    'Invalid Entry MODIFY': () => {
+        testDataModify.invalidTerms.forEach(test => {
+            modifyWantedFunc(modifyWantedPageObject, test)
+        })
+    },
+    'Valid Entry CANCEL': () => {
+        cancelTestData.validTerms.forEach(test => {
+            cancelFunc(cancelWantedPageObjects, test)
+        })
+    },
+    'Invalid Entry CANCEL': () => {
+        cancelTestData.invalidTerms.forEach(test => {
+            cancelFunc(cancelWantedPageObjects, test)
+        })
     }
+
 }
