@@ -11,11 +11,11 @@ var cancelWantedPageObjects = {}
 module.exports = {
     beforeEach: browser => {
         enterWanted = browser.page.enterWantedPageObjects()
-        enterWanted.navigate()
+        // enterWanted.navigate()
         modifyWantedPageObject = browser.page.modifyWantedPageObjects()
-        modifyWantedPageObject.navigate()
+        // modifyWantedPageObject.navigate()
         cancelWantedPageObjects = browser.page.cancelWantedPageObjects()
-        cancelWantedPageObjects.navigate()
+        // cancelWantedPageObjects.navigate()
 
     },
     after: function (browser) {
@@ -23,17 +23,20 @@ module.exports = {
 
     },
     'Valid Entry ENTER': () => {
+        enterWanted.navigate()
         EWtestData.validTerms.forEach(test => {
             enterWantedFunc(enterWanted, test)
         })
 
     },
     'Invalid Entry ENTER': () => {
+        enterWanted.navigate()
         EWtestData.invalidTerms.forEach(test => {
             enterWantedFunc(enterWanted, test)
         })
     },
     'Valid Entry MODIFY': () => {
+        modifyWantedPageObject.navigate()
         testDataModify.validTerms.forEach(test => {
             modifyWantedFunc(modifyWantedPageObject, test)
 
@@ -41,16 +44,19 @@ module.exports = {
 
     },
     'Invalid Entry MODIFY': () => {
+        modifyWantedPageObject.navigate()
         testDataModify.invalidTerms.forEach(test => {
             modifyWantedFunc(modifyWantedPageObject, test)
         })
     },
     'Valid Entry CANCEL': () => {
+        cancelWantedPageObjects.navigate()
         cancelTestData.validTerms.forEach(test => {
             cancelFunc(cancelWantedPageObjects, test)
         })
     },
     'Invalid Entry CANCEL': () => {
+        cancelWantedPageObjects.navigate()
         cancelTestData.invalidTerms.forEach(test => {
             cancelFunc(cancelWantedPageObjects, test)
         })
